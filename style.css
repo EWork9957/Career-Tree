@@ -1,0 +1,115 @@
+body{
+    background-color: rgb(211, 141, 35);
+}
+/*NAV BAR~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+body {margin:0;}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-left: -46px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+/*WRAPPER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+body{
+    margin: 3%;
+}
+.sidebar{
+    grid-area: sidebar;
+    }
+    .sidebar2{
+        grid-area: sidebar2;
+    }
+    .content{
+        grid-area: content;
+    }
+    .header{
+        grid-area: header;
+    }
+    
+    .wrapper{
+        display: grid;
+        grid-gap: 1em;
+        grid-template-areas: 
+         "header"
+         "sidebar"
+         "content"
+         "sidebar2"
+    }
+    @media only screen and (min-width: 500px) {
+    .wrapper{
+        grid-template-columns: auto auto;
+        grid-template-areas: 
+        "header   header"
+        "sidebar  content"
+        "sidebar2 sidebar2";
+    }
+    }
+    @media only screen and (min-width: 600px) {
+        .wrapper{
+            grid-gap: 20px;
+            grid-template-columns: auto auto auto;
+            grid-template-areas: 
+            "header  header  header"
+            "sidebar content sidebar2";
+            max-width: auto;
+        }
+    }
+.box{
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 150%;
+}
+.wrapper{
+    background-color: rgb(211, 141, 35);
+    color: #444;
+}
+.header{
+    background-color: #1F2833;
+    color: #66FCF1;
+    margin-top: 15px;
+    text-align: center;
+}
+.sidebar, .content, .sidebar2{
+    background-color: #1F2833;
+    color: #45A293;
+}
+.sub_sidebar, .sub_content, .sub_sidebar2{
+    background-color: #C5C6C7;
+    color: #45A293;
+}
+
+.sub_sidebar h3, .sub_content h3, .sub_sidebar2 h3{
+    color: rgb(30, 37, 100);
+}
+.sub_sidebar p, .sub_content p, .sub_sidebar2 p{
+    color: rgba(31, 77, 116, 0.801);
+}
